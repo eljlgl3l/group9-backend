@@ -1,7 +1,7 @@
 package org.backend.gregsgamesbackend.services;
 
-import org.backend.gregsgamesbackend.dto.CartAddItemDTO;
-import org.backend.gregsgamesbackend.dto.CustomerSyncRequest;
+import org.backend.gregsgamesbackend.dto.request.CartAddItemDTO;
+import org.backend.gregsgamesbackend.dto.request.CustomerSyncRequest;
 import org.backend.gregsgamesbackend.models.Cart;
 import org.backend.gregsgamesbackend.models.CartItem;
 import org.backend.gregsgamesbackend.models.Customer;

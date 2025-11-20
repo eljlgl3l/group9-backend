@@ -9,6 +9,7 @@ import java.util.List;
 @Table(name = "CustomerOrder")
 public class CustomerOrder {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long orderId;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -29,14 +30,14 @@ public class CustomerOrder {
 
     @Enumerated(EnumType.STRING)
     @Column(length = 20)
-    private OrderStatus orderStatus = OrderStatus.PENDING;
+    private OrderStatus orderStatus = OrderStatus.pending;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<OrderItem> items;
 
     // Enum for order status
     public enum OrderStatus {
-        PENDING, SHIPPED, DELIVERED
+        pending, shipped, delivered
     }
 
     public Customer getCustomer() {

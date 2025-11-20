@@ -1,41 +1,17 @@
-package org.backend.gregsgamesbackend.models;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import jakarta.persistence.*;
+package org.backend.gregsgamesbackend.dto.request;
 
 import java.time.LocalDate;
 
-@Entity
-@Table(name = "game")
-public class Game {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer gameId;
-
+public class GameDTO {
     private String title;
-
-    @JsonManagedReference // <-- ADD THIS
-    @ManyToOne
-    @JoinColumn(name = "platform_id", nullable = false) // This is the FOREIGN KEY column in your Game table
-    private Platform platform;
-
     private String developer;
+    private int platformId;
     private String publisher;
-
-    @Column(name = "release_date")
     private LocalDate releaseDate;
-
     private Double price;
     private String image_url;
-    private Integer quantity_in_stock;
+    private Integer quantity;
 
-    public Integer getGameId() {
-        return gameId;
-    }
-
-    public void setGameId(Integer gameId) {
-        this.gameId = gameId;
-    }
 
     public String getTitle() {
         return title;
@@ -45,20 +21,20 @@ public class Game {
         this.title = title;
     }
 
-    public Platform getPlatform() {
-        return platform;
-    }
-
-    public void setPlatform(Platform platform) {
-        this.platform = platform;
-    }
-
     public String getDeveloper() {
         return developer;
     }
 
     public void setDeveloper(String developer) {
         this.developer = developer;
+    }
+
+    public int getPlatformId() {
+        return platformId;
+    }
+
+    public void setPlatformId(int platformId) {
+        this.platformId = platformId;
     }
 
     public String getPublisher() {
@@ -85,12 +61,12 @@ public class Game {
         this.price = price;
     }
 
-    public Integer getQuantity_in_stock() {
-        return quantity_in_stock;
+    public Integer getQuantity() {
+        return quantity;
     }
 
-    public void setQuantity_in_stock(Integer quantity_in_stock) {
-        this.quantity_in_stock = quantity_in_stock;
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 
     public String getImage_url() {

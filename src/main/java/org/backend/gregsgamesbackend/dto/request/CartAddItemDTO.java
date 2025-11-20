@@ -1,9 +1,9 @@
-package org.backend.gregsgamesbackend.dto;
+package org.backend.gregsgamesbackend.dto.request;
 
-public class CartUpdateQuantityDTO {
+public class CartAddItemDTO {
     private String clerkId;
     private Long productId;
-    private Integer change; // Change amount (+1 or -1)
+    private Integer quantity; // Quantity to add (always 1 from frontend)
 
     public String getClerkId() {
         return clerkId;
@@ -21,11 +21,11 @@ public class CartUpdateQuantityDTO {
         this.productId = productId;
     }
 
-    public Integer getChange() {
-        return change;
+    public Integer getQuantity() {
+        return quantity;
     }
 
-    public void setChange(Integer change) {
-        this.change = change;
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
     }
 }

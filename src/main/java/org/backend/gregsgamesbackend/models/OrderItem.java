@@ -1,5 +1,6 @@
 package org.backend.gregsgamesbackend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
 @Entity
@@ -19,11 +20,11 @@ public class OrderItem {
     private ProductType productType;
 
     private Long productId;
-    private Integer quantity = 1;
+    private Integer quantity;
     private Double unitPrice;
 
     public enum ProductType {
-        GAME, PLATFORM, ACCESSORY
+        game, platform, accessory
     }
 
     public Long getOrderItemId() {

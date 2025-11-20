@@ -12,4 +12,5 @@ import java.util.List;
 public interface GameRepository extends JpaRepository<Game, Integer> {
     Page<Game> findByDeveloperIgnoreCase(String consoleName, Pageable pageable);
     List<Game> findByPlatform_TitleIgnoreCase(String platformName);
+    List<Game> findByTitleContainingIgnoreCase(String query);
 }

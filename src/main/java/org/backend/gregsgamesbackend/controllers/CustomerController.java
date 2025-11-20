@@ -1,6 +1,6 @@
 package org.backend.gregsgamesbackend.controllers;
 
-import org.backend.gregsgamesbackend.dto.CustomerSyncRequest;
+import org.backend.gregsgamesbackend.dto.request.CustomerSyncRequest;
 import org.backend.gregsgamesbackend.models.Customer;
 import org.backend.gregsgamesbackend.services.CustomerService;
 import org.springframework.web.bind.annotation.*;

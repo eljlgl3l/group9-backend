@@ -1,9 +1,8 @@
 package org.backend.gregsgamesbackend.controllers;
 
-import org.apache.coyote.Response;
-import org.backend.gregsgamesbackend.dto.CartAddItemDTO;
-import org.backend.gregsgamesbackend.dto.CartUpdateQuantityDTO;
-import org.backend.gregsgamesbackend.dto.CustomerSyncRequest;
+import org.backend.gregsgamesbackend.dto.request.CartAddItemDTO;
+import org.backend.gregsgamesbackend.dto.request.CartUpdateQuantityDTO;
+import org.backend.gregsgamesbackend.dto.request.CustomerSyncRequest;
 import org.backend.gregsgamesbackend.models.Cart;
 import org.backend.gregsgamesbackend.models.CartItem;
 import org.backend.gregsgamesbackend.services.CartService;

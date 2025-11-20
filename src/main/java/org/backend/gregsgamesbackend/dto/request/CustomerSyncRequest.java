@@ -1,4 +1,4 @@
-package org.backend.gregsgamesbackend.dto;
+package org.backend.gregsgamesbackend.dto.request;
 
 // Request DTO for syncing customers
 public class CustomerSyncRequest {
